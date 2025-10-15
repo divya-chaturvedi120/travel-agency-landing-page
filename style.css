@@ -8,6 +8,11 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+body {
+  background: linear-gradient(to bottom, #fff5e6, #d9f0ff);
+  /* sandy cream fading into light blue */
+}
+
 /* ===========================
    Header Section
 =========================== */
@@ -26,7 +31,7 @@
 .nav-bar {
   position: absolute;
   top: 20px;
-  left: 50%;
+  left: 75%;
   transform: translateX(-50%);
 }
 
@@ -51,4 +56,56 @@
 =========================== */
 .category {
   text-align: center;
+}
+
+.category-info {
+  display: flex;
+  margin-top: 5px;
+}
+
+.category #main-heading {
+  color: #0288d1;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.category h3 {
+  color: #01579b;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.category-info .info i {
+  color: #0288d1; /* vibrant blue, matches travel/sky theme */
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.category-info .info:nth-child(1) i {
+  color: #e26140;
+} /* sky blue */
+.category-info .info:nth-child(2) i {
+  color: #fbc02d;
+} /* sunny yellow */
+.category-info .info:nth-child(3) i {
+  color: #26a69a;
+} /* teal/green */
+.category-info .info:nth-child(4) i {
+  color: #ff7043;
+} /* coral/orange */
+
+#info-heading {
+  color: #0277bd;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+.info p {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.5;
 }
