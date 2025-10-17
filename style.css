@@ -1,16 +1,16 @@
 /* ===========================
-   Global Styles
+   Global Styles (Dark Theme)
 =========================== */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(to bottom, #fff5e6, #d9f0ff);
-  /* sandy cream fading into light blue */
+  background: linear-gradient(to bottom, #0a0a0a, #1b2735, #0d1b2a);
+  color: #f0f0f0;
 }
 
 /* ===========================
@@ -23,6 +23,9 @@ body {
 .header-bar header img {
   width: 100%;
   height: 80vh;
+  object-fit: cover;
+  filter: brightness(80%);
+  border-bottom: 2px solid #ffcc33;
 }
 
 /* ===========================
@@ -44,11 +47,12 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  color: black;
+  color: #ffd700;
+  transition: color 0.3s ease;
 }
 
-.nav-bar nav a:hover {
-  color: #ffd700;
+.nav-bar a:hover {
+  color: #00c6ff;
 }
 
 /* ===========================
@@ -56,56 +60,151 @@ body {
 =========================== */
 .category {
   text-align: center;
-}
-
-.category-info {
-  display: flex;
-  margin-top: 5px;
+  margin-top: 40px;
+  padding: 40px 20px;
+  background: rgba(20, 30, 48, 0.7);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
 }
 
 .category #main-heading {
-  color: #0288d1;
-  font-weight: bold;
+  color: #00c6ff;
+  font-weight: 600;
   letter-spacing: 2px;
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-size: 15px;
 }
 
 .category h3 {
-  color: #01579b;
-  font-size: 28px;
+  color: #ffd700;
+  font-size: 30px;
   margin-bottom: 30px;
   font-weight: 700;
 }
 
+.category-info {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.category-info .info {
+  background: #111827;
+  color: #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-info .info:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.4);
+}
+
 .category-info .info i {
-  color: #0288d1; /* vibrant blue, matches travel/sky theme */
-  font-size: 30px;
+  font-size: 32px;
   margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .category-info .info:nth-child(1) i {
-  color: #e26140;
-} /* sky blue */
+  color: #00c6ff;
+}
 .category-info .info:nth-child(2) i {
-  color: #fbc02d;
-} /* sunny yellow */
+  color: #ffd700;
+}
 .category-info .info:nth-child(3) i {
   color: #26a69a;
-} /* teal/green */
+}
 .category-info .info:nth-child(4) i {
   color: #ff7043;
-} /* coral/orange */
+}
 
 #info-heading {
-  color: #0277bd;
+  color: #ffd700;
   font-weight: bold;
   font-size: 18px;
   margin: 10px 0 5px 0;
 }
+
 .info p {
-  color: #555555;
-  font-size: 14px;
+  color: #ccc;
+  font-size: 13px;
   line-height: 1.5;
+}
+
+/* ===========================
+   Destination Section
+=========================== */
+.destination {
+  margin-top: 60px;
+  padding: 40px 20px;
+}
+
+.destination p,
+.destination h3 {
+  text-align: center;
+}
+
+.destination p {
+  color: #00c6ff;
+  letter-spacing: 2px;
+}
+
+.destination h3 {
+  color: #ffd700;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.destination-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px 40px;
+}
+
+.destination-images .images {
+  background: #111827;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-images .images:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 16px rgba(0, 198, 255, 0.3);
+}
+
+.destination-images .images img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.destination-images .images p {
+  padding: 15px;
+  font-size: 13px;
+  color: #ddd;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 768px) {
+  .nav-bar nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .category-info {
+    flex-direction: column;
+    align-items: center;
+  }
 }
